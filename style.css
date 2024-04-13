@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Font1";
+  src: url("assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url("assets/fonts/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Font3";
+  src: url("assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Font4";
+  src: url("assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Font5";
+  src: url("assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Font6";
+  src: url("assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 32px;
+}
+
+.main-continer {
+  background-color: white;
+  border-radius: 10px 10px 80px 10px;
+  position: relative;
+  width: 60%;
+  min-width: 450px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+  align-items: start;
+}
+
+.date-container {
+  display: flex;
+  justify-content: start;
+  position: relative;
+  width: 80%;
+  top: 0;
+  z-index: 1;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid hsl(0, 0%, 94%);
+}
+
+.age-container {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+.input-container {
+  margin-left: 5%;
+}
+
+input {
+  border-color: hsl(0, 0%, 94%);
+  padding: 8px;
+  width: 80px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+}
+
+.age {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: -5px;
+}
+
+.age-text {
+  color: hsl(259, 100%, 65%);
+  margin-right: 5px;
+}
+
+img {
+  background-color: hsl(259, 100%, 65%);
+  height: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+  align-self: end;
+  margin-top: 70px;
+  margin-right: 8%;
+  cursor: pointer;
+}
+
+.age h1 {
+  font-family: "Font3";
+}
+
+.input-container p {
+  color: hsl(0, 1%, 48%);
+  font-family: "Font1";
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+input::placeholder {
+  color: hsl(0, 1%, 63%);
+  font-family: "Font1";
+  font-size: 0.8rem;
+}
+
+input:focus {
+  outline: none; /* Remove the outline */
+
+  /* You can add additional styling for focus if needed */
+}
+
+.error {
+  /* display: none; */
+  /* max-width: 120px; */
+  font-size: 0.5rem;
+  margin: 2px;
+  color: hsl(0, 100%, 67%);
+  white-space: nowrap;
+  /* display: none; */
+}
+
+@media screen and (max-width: 600px) {
+  .main-continer {
+    width: 90%;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: auto;
+    max-width: 350px;
+  }
+
+  .date-container {
+    padding-bottom: 40px;
+  }
+
+  .age-container {
+    padding-top: 30px;
+  }
+
+  img {
+    height: 50px;
+    padding: 10px;
+    margin-top: 90px;
+    align-self: center;
+  }
+
+  .age h1 {
+    font-size: 3.5rem;
+  }
+}
