@@ -77,9 +77,10 @@ const monthDayMapper = {
 };
 
 function isValidDay(day, month) {
-  if (isValidMonth(month).isValid === false) month = 1;
+  if (isValidMonth(month).isValid === false) month = "1";
   if (day === "") return { isValid: false, message: "This field is required" };
   if (isNaN(day)) return { isValid: false, message: "Day must be a number" };
+  month = parseInt(month);
   if (day > 0 && day <= monthDayMapper[month]) {
     return { isValid: true, message: "" };
   }
