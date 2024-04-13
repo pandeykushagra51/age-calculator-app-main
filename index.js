@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const dayValidation = isValidDay(day, months);
       const yearValidation = isValidYear(year);
 
+      document.querySelector("#years").textContent = "- -";
+      document.querySelector("#months").textContent = "- -";
+      document.querySelector("#days").textContent = "- -";
+
       if (
         monthValidation.isValid &&
         dayValidation.isValid &&
